@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =====================================================
+       META & HEAD CONFIGURATION
+       - charset: UTF-8 for all characters
+       - viewport: responsive mobile scaling
+       - title: browser tab label
+  ===================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhavesh | Data Scientist Portfolio</title>
+
+  <!-- =====================================================
+       EXTERNAL LIBRARIES
+       1. Bootstrap 5 - responsive grid & components
+       2. Bootstrap Icons - icon set
+       3. Animate.css - scroll/entry animations
+       4. Google Fonts - typography
+  ===================================================== -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Our custom CSS (shared across all pages) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       - Bootstrap navbar with dark theme
+       - Collapses to hamburger on mobile
+       - Each link routes to its own HTML page
+  ===================================================== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+
+      <!-- Brand / Logo -->
+      <a class="navbar-brand fw-bold" href="index.html">
+        <span class="brand-text">Portfolio</span>
+      </a>
+
+      <!-- Mobile hamburger toggle -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav links — each goes to its own page -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/skills.html">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/certification.html">Certification</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+
+  <!-- =====================================================
+       HERO SECTION
+       - Full-viewport height landing
+       - Left: text + social icons + CTA button
+       - Right: profile image with glowing ring
+  ===================================================== -->
+  <section class="hero-section d-flex align-items-center" id="home">
+
+    <!-- Animated background particles (pure CSS orbs) -->
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+    <div class="bg-orb orb3"></div>
+
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <!-- ---- LEFT COLUMN: Introduction Text ---- -->
+        <div class="col-lg-6 col-md-12 hero-text-col animate__animated animate__fadeInLeft">
+
+          <!-- Greeting -->
+          <p class="greeting-line">Hello, It's Me</p>
+
+          <!-- Name -->
+          <h1 class="hero-name">Bhavesh Jangid</h1>
+
+          <!-- Animated typing role -->
+          <h2 class="hero-role">
+            I'm a <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+          </h2>
+
+          <!-- Short bio -->
+          <p class="hero-bio">
+            I'm a <strong>Data Scientist</strong> passionate about turning raw data into
+            actionable insights. With expertise in Machine Learning, Deep Learning, and
+            Data Visualization — I build intelligent solutions that drive real impact.
+          </p>
+
+          <!-- ---- Social Media Icons ---- -->
+          <!-- Each icon links to your social profile — update href values -->
+          <div class="social-icons d-flex gap-3 mb-4">
+            <a href="https://github.com/Bhavesh9785" target="_blank" class="social-btn" aria-label="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/bhavesh-jangid" target="_blank" class="social-btn" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://kaggle.com/bhavesh9785" target="_blank" class="social-btn" aria-label="Kaggle">
+              <i class="bi bi-bar-chart-line"></i>
+            </a>
+            <a href="mailto:bhaveshjangid309@gmail.com" class="social-btn" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+
+          <!-- ---- CTA Buttons ---- -->
+          <div class="d-flex gap-3 flex-wrap">
+            <!-- Routes to About page -->
+            <a href="pages/about.html" class="btn-glow">More About Me</a>
+            <!-- Download CV — place bhavesh_cv.pdf in assets/ folder -->
+            <a href="assets/bhavesh_cv.pdf" download class="btn-outline-glow">Download CV</a>
+          </div>
+
+        </div>
+        <!-- END LEFT COLUMN -->
+
+        <!-- ---- RIGHT COLUMN: Profile Image ---- -->
+        <div class="col-lg-6 col-md-12 d-flex justify-content-center hero-img-col animate__animated animate__fadeInRight">
+
+          <!-- 
+            PROFILE IMAGE SETUP:
+            -------------------------------------------------------
+            Place your photo (bhavesh.png) inside the same folder
+            as index.html OR in the assets/ subfolder.
+            
+            Current path expects: E:\bhavesh.png  →  assets/bhavesh.png
+            
+            STEPS:
+            1. Copy bhavesh.png from E:\ into the portfolio/assets/ folder
+            2. The <img src="assets/bhavesh.png" ...> below will load it
+            -------------------------------------------------------
+          -->
+          <div class="img-ring-wrapper">
+            <!-- Animated glow ring -->
+            <div class="ring-glow"></div>
+            <!-- Profile image — UPDATE src if file is elsewhere -->
+            <img
+              src="assets/bhavesh.png"
+              alt="Bhavesh — Data Scientist"
+              class="profile-img"
+              onerror="this.src='https://ui-avatars.com/api/?name=Bhavesh&size=400&background=0a0f2c&color=00f5ff&bold=true'"
+            />
+          </div>
+
+        </div>
+        <!-- END RIGHT COLUMN -->
+
+      </div>
+    </div>
+
+  </section>
+  <!-- END HERO SECTION -->
+
+  <!-- =====================================================
+       QUICK STATS STRIP
+       Numbers that scroll by under the hero
+  ===================================================== -->
+  <section class="stats-strip py-4">
+    <div class="container">
+      <div class="row text-center gy-3">
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <h3 class="stat-num" data-count="10">0</h3>
+            <p class="stat-label">Projects</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <h3 class="stat-num" data-count="1">0</h3>
+            <p class="stat-label">Years Experience</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <h3 class="stat-num" data-count="10">0</h3>
+            <p class="stat-label">Tech Skills</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <h3 class="stat-num" data-count="4">0</h3>
+            <p class="stat-label">Certifications</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END STATS STRIP -->
+
+  <!-- =====================================================
+       FOOTER
+       Consistent across all pages
+  ===================================================== -->
+  <footer class="site-footer text-center py-3">
+    <p>
+         <span class="accent">Bhavesh Jangid</span> — Data Scientist ,Web Developer.
+         <i class="bi bi-heart-fill text-danger"></i>
+      </p>
+  </footer>
+
+  <!-- =====================================================
+       SCRIPTS
+       1. Bootstrap JS bundle (includes Popper for navbar)
+       2. Our custom JS (animations, typing effect, counters)
+  ===================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
